@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Órdenes sugeridas — Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#0F172A;--surface:#1E293B;--text:#F8FAFC;--muted:#94A3B8;--accent:#0EA5E9;--border:#475569}
+    *{box-sizing:border-box}body{margin:0;font-family:"IBM Plex Sans",sans-serif;background:var(--bg);color:var(--text);display:flex;min-height:100vh}
+    aside{width:220px;background:#0B1224;border-right:1px solid var(--border);padding:24px 16px}
+    aside h1{font-family:"Source Serif 4",serif;font-size:1.15rem;margin:0 0 24px;color:var(--accent)}
+    nav a{display:block;padding:10px 12px;color:var(--muted);text-decoration:none;border-radius:6px;margin-bottom:4px}
+    nav a.active{background:var(--surface);color:var(--text)}
+    main{flex:1;padding:24px}
+    h2{font-family:"Source Serif 4",serif}
+    .note{color:var(--muted);margin:8px 0 16px}
+    table{width:100%;border-collapse:collapse;background:var(--surface)}
+    th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);font-size:.9rem}
+    th{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>Almacén IT</h1>
+    <nav>
+      <a href="01-dashboard.html">Dashboard</a>
+      <a href="02-inventario.html">Inventario</a>
+      <a href="03-proveedores.html">Proveedores</a>
+      <a class="active" href="04-ordenes-sugeridas.html">Órdenes sugeridas</a>
+    </nav>
+  </aside>
+  <main>
+    <h2>Órdenes de compra sugeridas</h2>
+    <p class="note">Cantidad = max(0, ideal − actual) cuando aplica regla de crítico o antigüedad.</p>
+    <table>
+      <thead><tr><th>SKU</th><th>Producto</th><th>Proveedor</th><th>Cant.</th><th>Costo total</th><th>Regla</th></tr></thead>
+      <tbody>
+        <tr><td>NB-HP-002</td><td>Laptop HP ProBook 450</td><td>TechDistribuidora</td><td>8</td><td>$22.4M</td><td>Stock crítico</td></tr>
+        <tr><td>WEB-LOG-019</td><td>Webcam Logitech C920</td><td>TechDistribuidora</td><td>15</td><td>$3.9M</td><td>Stock crítico</td></tr>
+        <tr><td>UPS-TRI-012</td><td>UPS Tripp Lite 1000VA</td><td>Energía UPS</td><td>6</td><td>$3.7M</td><td>Crítico + &gt;90 días</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

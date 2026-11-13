@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inventario — Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#0F172A;--surface:#1E293B;--text:#F8FAFC;--muted:#94A3B8;--accent:#0EA5E9;--ok:#14B8A6;--warn:#F59E0B;--danger:#EF4444;--border:#475569}
+    *{box-sizing:border-box}body{margin:0;font-family:"IBM Plex Sans",sans-serif;background:var(--bg);color:var(--text);display:flex;min-height:100vh}
+    aside{width:220px;background:#0B1224;border-right:1px solid var(--border);padding:24px 16px}
+    aside h1{font-family:"Source Serif 4",serif;font-size:1.15rem;margin:0 0 24px;color:var(--accent)}
+    nav a{display:block;padding:10px 12px;color:var(--muted);text-decoration:none;border-radius:6px;margin-bottom:4px}
+    nav a.active{background:var(--surface);color:var(--text)}
+    main{flex:1;padding:24px;overflow:auto}
+    h2{font-family:"Source Serif 4",serif}
+    .filters{display:flex;gap:8px;margin:16px 0}
+    .filters button{background:transparent;border:1px solid var(--border);color:var(--text);padding:8px 14px;border-radius:6px;cursor:pointer}
+    .filters button.active{background:var(--accent);border-color:var(--accent)}
+    table{width:100%;border-collapse:collapse;background:var(--surface)}
+    th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);font-size:.9rem}
+    th{color:var(--muted);font-weight:500}
+    .badge{padding:2px 8px;border-radius:4px;font-size:.75rem}
+    .badge.crit{background:rgba(239,68,68,.2);color:var(--danger)}
+    .badge.old{background:rgba(245,158,11,.2);color:var(--warn)}
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>Almacén IT</h1>
+    <nav>
+      <a href="01-dashboard.html">Dashboard</a>
+      <a class="active" href="02-inventario.html">Inventario</a>
+      <a href="03-proveedores.html">Proveedores</a>
+      <a href="04-ordenes-sugeridas.html">Órdenes sugeridas</a>
+    </nav>
+  </aside>
+  <main>
+    <h2>Catálogo tecnológico</h2>
+    <div class="filters">
+      <button class="active">Todos</button>
+      <button>Críticos</button>
+      <button>&gt;90 días</button>
+    </div>
+    <table>
+      <thead><tr><th>SKU</th><th>Producto</th><th>Stock</th><th>Mín/Ideal</th><th>Días</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>NB-HP-002</td><td>Laptop HP ProBook 450</td><td>2</td><td>4 / 10</td><td>40</td><td><span class="badge crit">Crítico</span></td></tr>
+        <tr><td>SSD-KING-005</td><td>SSD Kingston NV2 1TB</td><td>3</td><td>10 / 30</td><td>20</td><td><span class="badge crit">Crítico</span></td></tr>
+        <tr><td>SRV-DEL-009</td><td>Servidor Dell PowerEdge R350</td><td>1</td><td>1 / 3</td><td>120</td><td><span class="badge old">&gt;90 días</span></td></tr>
+        <tr><td>MON-SAM-004</td><td>Monitor Samsung 27"</td><td>15</td><td>6 / 20</td><td>35</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
